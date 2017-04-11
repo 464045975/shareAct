@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script type="text/javascript">
+	function isLeap(year){
+		return year % 4 ==  0 ? (year % 100 != 0 ? 1 :  (year % 400 == 0 ? 1 : 0)) : 0;
+	}
+	var i, k, 
+	today = new Date(),
+	y = today.getFullYear(),
+	m = today.getMonth(),
+	d = today.getDay(),
+	firstday = new Date(y,m,1),
+	dayOfWeek = firstday.getDay();
+	days_per_month = new Array(31, 28 + isLeap(y), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31),
+	str_nums = Math.ceil((dayOfWeek + days_per_month[m]));
+
+</script>
